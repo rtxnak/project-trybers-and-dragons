@@ -1,10 +1,11 @@
+import Character from '../Character';
 import Fighter from '../Fighter';
 import Battle from './Battle';
 
 class PVP extends Battle {
-  private _enemy: Fighter;
+  private _enemy: Character | Fighter;
 
-  constructor(player: Fighter, enemy: Fighter) {
+  constructor(player: Character | Fighter, enemy: Character | Fighter) {
     super(player);
     this._enemy = enemy;
   }
